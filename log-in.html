@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dev{
+            font-family:sans-serif;
+            background:linear-gradient(120deg,#000000,#181818,#2CCCC3,#FACD3D,#5626C4,#E60576);
+            overflow: hidden;
+            height: 100vh;
+        }
+        .mukhija{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: white;
+            border-radius: 50px;
+        }
+        .mukhija h1{
+            border-bottom: 1px solid silver;
+            text-align: center;
+            padding: 0 0 20px 0;
+        }
+        .mukhija form{
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        form .text{
+            position: relative;
+            border-bottom: 2px solid #2980b9;
+            margin: 30px 0;
+        }
+        .text input{
+            width:100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+        .text label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+        transform: translateY(-50%);
+            color: #2980b9;
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s; 
+        }
+            .text input:focus ~ label,
+            .text input:valid ~ label{
+                top: -5px;
+                color: #2691d9
+            }
+            .text input:focus ~ span::before,
+            .text input:valid ~ span::before{
+                width:100%
+            }
+            .text1{
+                margin: -5px 0 20px 5px;
+                color: #a6a6a6;
+                cursor: pointer;
+            }
+            .text1:hover{
+                text-decoration: underline;
+            }
+            input[type="button"]{
+                width: 90%;
+                height: 50px;
+                border: 1px solid;
+                background: #2691d9;
+                color:#e9f4fb;
+                font-weight: 700;
+                font-size: 18px;
+                border-radius: 25px;
+                cursor: pointer;
+                outline: none;
+            }   
+            input[type="button"]:hover{
+                transition: .5s;
+                background-color: #2691d9;
+
+            } 
+     
+    </style>
+</head>
+<body class="dev">
+    <div class="mukhija">
+        <h1>Login</h1>
+        <form method="post" action="insert.php">
+            <div class="text">
+                <input type="text" name="firstname" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="text">
+                <input type="password" name="password" required>
+                <span></span>
+                <label nam>Password</label>
+            </div>
+            <script>
+                function redirect(){
+                    window.location="D:/web project/Sky Adventures/index.html"
+                };
+            </script>
+            <center>
+        <button style="background-color: rgb(0, 132, 255); color:white; padding: 15px; width: 100px; border: 1px white; border-radius: 5px  ;">Login 
+        </button>
+    </center>
+
+        </form>
+    </div>
+    </body>
+</html>
